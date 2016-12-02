@@ -1,0 +1,6 @@
+bmcgehee/AppC:
+  Build:
+    - echo "No AppC artifacts to build"
+    - echo "Packaging AppC"
+  PkgInclude:
+    - 'AppC/'

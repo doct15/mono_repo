@@ -1,0 +1,6 @@
+bmcgehee/AppB:
+  Build:
+    - echo "No AppB artifacts to build"
+    - echo "Packaging AppB"
+  PkgInclude:
+    - 'AppB/'

@@ -1,0 +1,6 @@
+bmcgehee/AppA:
+  Build:
+    - echo "No AppA artifacts to build"
+    - echo "Packaging AppA"
+  PkgInclude:
+    - 'AppA/'
