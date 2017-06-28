@@ -4,6 +4,7 @@ bmcgehee/AppA:
     - echo "Username $APPA_DD_USERNAME"
     - echo "Endpoint $APPA_DD_ENDPOINT"
     - docker login -u "$APPA_DD_USERNAME" -p "$APPA_DD_PW" -e "$APPA_DD_EMAIL" $APPA_DD_ENDPOINT
+    - echo "- docker build --quiet=false -t $APPA_DD_REPO $APPA_DD_PATH"
     - docker build --quiet=false -t "$APPA_DD_REPO" "$APPA_DD_PATH"
     - docker tag "$APPA_DD_REPO" "$APPA_DD_REPO:$DISTELLI_BUILDNUM"
     - docker push "$APPA_DD_REPO:$DISTELLI_BUILDNUM"
