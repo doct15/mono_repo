@@ -1,10 +1,10 @@
 bmcgehee/AppB:
   Build:
     - echo "No AppB artifacts to build"
-    - docker login -u "$APPB-DD-USERNAME" -p "$APPB-DD-PW" -e "$APPB-DD-EMAIL" $APPB-DD-ENDPOINT
-    - docker build --quiet=false -t "$APPB-DD-REPO" "$APPB-DD-PATH"
-    - docker tag "$APPB-DD-REPO" "$APPB-DD-REPO:$DISTELLI_BUILDNUM"
-    - docker push "$APPB-DD-REPO:$DISTELLI_BUILDNUM"
+    - docker login -u "$APPB_DD_USERNAME" -p "$APPB_DD_PW" -e "$APPB_DD_EMAIL" $APPB_DD_ENDPOINT
+    - docker build --quiet=false -t "$APPB_DD_REPO" "$APPB_DD_PATH"
+    - docker tag "$APPB_DD_REPO" "$APPB_DD_REPO:$DISTELLI_BUILDNUM"
+    - docker push "$APPB_DD_REPO:$DISTELLI_BUILDNUM"
     - echo "Packaging AppB"
   PkgInclude:
     - 'AppB/'

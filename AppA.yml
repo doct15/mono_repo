@@ -1,10 +1,10 @@
 bmcgehee/AppA:
   Build:
     - echo "No AppA artifacts to build"
-    - docker login -u "$APPA-DD-USERNAME" -p "$APPA-DD-PW" -e "$APPA-DD-EMAIL" $APPA-DD-ENDPOINT
-    - docker build --quiet=false -t "$APPA-DD-REPO" "$APPA-DD-PATH"
-    - docker tag "$APPA-DD-REPO" "$APPA-DD-REPO:$DISTELLI_BUILDNUM"
-    - docker push "$APPA-DD-REPO:$DISTELLI_BUILDNUM"
+    - docker login -u "$APPA_DD_USERNAME" -p "$APPA_DD_PW" -e "$APPA_DD_EMAIL" $APPA_DD_ENDPOINT
+    - docker build --quiet=false -t "$APPA_DD_REPO" "$APPA_DD_PATH"
+    - docker tag "$APPA_DD_REPO" "$APPA_DD_REPO:$DISTELLI_BUILDNUM"
+    - docker push "$APPA_DD_REPO:$DISTELLI_BUILDNUM"
     - echo "Packaging AppA"
   PkgInclude:
     - 'AppA/'
